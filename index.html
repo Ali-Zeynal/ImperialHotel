@@ -1,0 +1,677 @@
+<html lang="en" class="android mobile portrait">
+  <head>
+    <title>Main page</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/258de8b905.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <link rel="stylesheet" href="style/grid.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/camera.css" />
+    <link rel="stylesheet" href="style/touchTouch.css" />
+    <!-- <script
+      type="text/javascript"
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-2BM4094Z6X&amp;cx=c&amp;_slc=1"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/analytics.js"
+    ></script>
+    <script
+      async=""
+      src="//www.googletagmanager.com/gtm.js?id=GTM-P9FT69"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://ssl.google-analytics.com/ga.js"
+    ></script> -->
+    <!-- <script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script>
+    <script src="/cdn-cgi/apps/body/4o300efCt-CXoq1JEC-sVReFz48.js"></script> -->
+
+    <!-- 
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.equalheights.js"></script> -->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <!-- <script src="js/jquery.mobile.customized.min.js"></script> -->
+    <!--<![endif]-->
+    <!-- <script src="js/camera.js"></script>
+    <script src="js/touchTouch.js"></script> -->
+
+    <!--[if lt IE 9]>
+    <html class="lt-ie9">
+    <div id="ie6-alert" style="width: 100%; text-align:center; background: #232323;">
+        <img src="https://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0"
+             usemap="#Map" longdesc="https://die6.frontcube.com"/>
+        <map name="Map" id="Map">
+            <area shape="rect" coords="496,201,604,329"
+                  href="https://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank"
+                  alt="Download Interent Explorer"/>
+            <area shape="rect" coords="380,201,488,329" href="https://www.apple.com/safari/download/" target="_blank"
+                  alt="Download Apple Safari"/>
+            <area shape="rect" coords="268,202,376,330" href="https://www.opera.com/download/" target="_blank"
+                  alt="Download Opera"/>
+            <area shape="rect" coords="155,202,263,330" href="https://www.mozilla.com/" target="_blank"
+                  alt="Download Firefox"/>
+            <area shape="rect" coords="35,201,143,329" href="https://www.google.com/chrome" target="_blank"
+                  alt="Download Google Chrome"/>
+        </map>
+    </div>
+
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+    <!-- <link
+      rel="stylesheet"
+      href="data:text/css;charset=utf-8;base64,Y2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gewogIGRpc3BsYXk6IGJsb2NrOwogIGJhY2tncm91bmQ6ICM0NTQ4NGQ7CiAgY29sb3I6ICNmZmY7CiAgbGluZS1oZWlnaHQ6IDEuNDU7CiAgcG9zaXRpb246IGZpeGVkOwogIHotaW5kZXg6IDkwMDAwMDAwOwogIHRvcDogMDsKICBsZWZ0OiAwOwogIHJpZ2h0OiAwOwogIHBhZGRpbmc6IC41ZW0gMWVtOwogIHRleHQtYWxpZ246IGNlbnRlcjsKICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lOwogICAgIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7CiAgICAgIC1tcy11c2VyLXNlbGVjdDogbm9uZTsKICAgICAgICAgIHVzZXItc2VsZWN0OiBub25lOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXVtkYXRhLXZpc2liaWxpdHk9ImhpZGRlbiJdIHsKICBkaXNwbGF5OiBub25lOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXSBjbG91ZGZsYXJlLWFwcC1tZXNzYWdlIHsKICBkaXNwbGF5OiBibG9jazsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gYSB7CiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgY29sb3I6ICNlYmViZjQ7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGE6aG92ZXIsCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGE6YWN0aXZlIHsKICBjb2xvcjogI2RiZGJlYjsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwLWlkPSJhLWJldHRlci1icm93c2VyIl0gY2xvdWRmbGFyZS1hcHAtY2xvc2UgewogIGRpc3BsYXk6IGJsb2NrOwogIGN1cnNvcjogcG9pbnRlcjsKICBmb250LXNpemU6IDEuNWVtOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICByaWdodDogLjRlbTsKICB0b3A6IC4zNWVtOwogIGhlaWdodDogMWVtOwogIHdpZHRoOiAxZW07CiAgbGluZS1oZWlnaHQ6IDE7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcC1pZD0iYS1iZXR0ZXItYnJvd3NlciJdIGNsb3VkZmxhcmUtYXBwLWNsb3NlOmFjdGl2ZSB7CiAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTsKICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpOwp9CgpjbG91ZGZsYXJlLWFwcFthcHAtaWQ9ImEtYmV0dGVyLWJyb3dzZXIiXSBjbG91ZGZsYXJlLWFwcC1jbG9zZTpob3ZlciB7CiAgb3BhY2l0eTogLjllbTsKICBjb2xvcjogI2ZmZjsKfQo="
+    /> -->
+  </head>
+
+  <body class="" cz-shortcut-listen="true">
+    <div class="page">
+      <!--========================================================
+                                  HEADER
+        =========================================================-->
+      <header id="header" class="header">
+        <div id="stuck_container" class="stuck_container">
+          <div class="container">
+            <div class="row">
+              <div class="grid_12">
+                <nav class="nav nav__ins1">
+                  <ul class="sf-menu sf-js-enabled sf-arrows">
+                    <li class="active">
+                      <a href="./" class="sf-with-ul">Main page </a>
+                      <ul class="sub-menu" style="display: none">
+                        <li><a href="#">About</a></li>
+                        <li>
+                          <a href="#">News</a>
+                        </li>
+                        <li>
+                          <a href="#" class="sf-with-ul">Services</a>
+                          <ul class="sub-menu" style="display: none">
+                            <li><a href="#">Columns 01</a></li>
+                            <li><a href="#">Columns 02</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="index-1.html">About us</a>
+                    </li>
+                    <li><a href="index-2.html">Rooms</a></li>
+                    <li>
+                      <a href="index-3.html">Offers &amp; packages</a>
+                    </li>
+                    <li>
+                      <a href="index-4.html">Latest news</a>
+                    </li>
+                    <li>
+                      <a href="index-5.html">Contacts</a>
+                    </li>
+                  </ul>
+                  <!-- <div class="select-menu">
+                    <select class="select">
+                      <option value="#">Navigate to...</option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/"
+                        selected="selected"
+                      >
+                        &nbsp;Main page
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/#"
+                      >
+                        –&nbsp;About
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/#"
+                      >
+                        –&nbsp;News
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/#"
+                      >
+                        –&nbsp;Services
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/#"
+                      >
+                        ––&nbsp;Columns 01
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/#"
+                      >
+                        ––&nbsp;Columns 02
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/index-1.html"
+                      >
+                        &nbsp;About us
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/index-2.html"
+                      >
+                        &nbsp;Rooms
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/index-3.html"
+                      >
+                        &nbsp;Offers &amp; packages
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/index-4.html"
+                      >
+                        &nbsp;Latest news
+                      </option>
+                      <option
+                        value="https://livedemo00.template-help.com/wt_52982/index-5.html"
+                      >
+                        &nbsp;Contacts
+                      </option>
+                    </select>
+                  </div> -->
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="grid_12 center">
+              <hr />
+              <div class="brand">
+                <h1>
+                  <a href="./">Imperial<span>Hotel</span></a>
+                </h1>
+                <p>
+                  We offer you the best luxury hotel <br />
+                  with an impressive history
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--========================================================
+                                  CONTENT
+        =========================================================-->
+      <section id="content" class="content">
+        <div
+          id="camera"
+          class="camera-wrap camera_wrap"
+          style="display: block; height: 582px"
+        >
+          <div class="camera_fakehover">
+            <div class="camera_src camerastarted">
+              <div data-src="images/index_slide01.jpg"></div>
+              <div data-src="images/index_slide02.jpg"></div>
+              <div data-src="images/index_slide03.jpg"></div>
+            </div>
+            <div class="camera_target">
+              <div class="cameraCont">
+                <div
+                  class="cameraSlide cameraSlide_0 active"
+                  style="visibility: visible; display: block; z-index: 999"
+                >
+                  <img
+                    src="images/index_slide01.jpg?1698945298854"
+                    class="imgLoaded"
+                    style="
+                      visibility: visible;
+                      height: 582px;
+                      margin-left: 0px;
+                      margin-top: 0px;
+                      position: absolute;
+                      width: 1292px;
+                    "
+                    data-alignment=""
+                    data-portrait=""
+                    width="1292"
+                    height="582"
+                  />
+                  <div
+                    class="camerarelative"
+                    style="width: 1292px; height: 582px"
+                  ></div>
+                </div>
+                <div
+                  class="cameraSlide cameraSlide_1 cameranext"
+                  style="display: none; z-index: 1"
+                >
+                  <img
+                    src="images/index_slide02.jpg?1698945299218"
+                    class="imgLoaded"
+                    data-alignment=""
+                    data-portrait=""
+                    width="1292"
+                    height="582"
+                    style="
+                      visibility: visible;
+                      height: 582px;
+                      margin-left: 0px;
+                      margin-top: 0px;
+                      position: absolute;
+                      width: 1292px;
+                    "
+                  />
+                  <div
+                    class="camerarelative"
+                    style="width: 1292px; height: 582px"
+                  ></div>
+                </div>
+                <div
+                  class="cameraSlide cameraSlide_2"
+                  style="display: none; z-index: 1"
+                >
+                  <img
+                    src="images/index_slide03.jpg?1698945308989"
+                    class="imgLoaded"
+                    data-alignment=""
+                    data-portrait=""
+                    width="1292"
+                    height="582"
+                    style="
+                      visibility: visible;
+                      height: 582px;
+                      margin-left: 0px;
+                      margin-top: 0px;
+                      position: absolute;
+                      width: 1292px;
+                    "
+                  />
+                  <div
+                    class="camerarelative"
+                    style="width: 1292px; height: 582px"
+                  ></div>
+                </div>
+                <div
+                  class="cameraSlide cameraSlide_3 cameranext"
+                  style="z-index: 1; display: none"
+                >
+                  <div
+                    class="camerarelative"
+                    style="width: 1292px; height: 582px"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="camera_overlayer"></div>
+            <div class="camera_target_content">
+              <div class="cameraContents">
+                <div class="cameraContent active" style="display: block"></div>
+                <div class="cameraContent" style="display: none"></div>
+                <div class="cameraContent" style="display: none"></div>
+              </div>
+            </div>
+            <div
+              class="camera_bar"
+              style="display: none; top: auto; height: 7px"
+            >
+              <span
+                class="camera_bar_cont"
+                style="
+                  opacity: 0.8;
+                  position: absolute;
+                  inset: 0px;
+                  background-color: rgb(34, 34, 34);
+                "
+                ><span
+                  id="pie_0"
+                  style="
+                    opacity: 0.8;
+                    position: absolute;
+                    background-color: rgb(238, 238, 238);
+                    inset: 2px 0px;
+                    display: none;
+                  "
+                ></span
+              ></span>
+            </div>
+            <div class="camera_prev"><span></span></div>
+            <div class="camera_next"><span></span></div>
+          </div>
+          <div
+            class="camera_loader"
+            style="display: none; visibility: visible"
+          ></div>
+        </div>
+
+        <div class="container">
+          <div class="row well__ins1">
+            <div class="grid_3 dash-vert">
+              <h2>Events calendar</h2>
+
+              <ul class="events-list">
+                <li data-day="20" data-month="may">
+                  <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                  <p>
+                    Lorem ipsum dolor sit am nc <br />
+                    tetur adipi scing. Praesent ibm
+                  </p>
+                  <a href="#" class="btn2">more info</a>
+                </li>
+                <li data-day="15" data-month="may">
+                  <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                  <p>
+                    Lorem ipsum dolor sit amet,nc <br />
+                    tetur adipi scing. Praesenuum.
+                  </p>
+                  <a href="#" class="btn2">more info</a>
+                </li>
+                <li data-day="11" data-month="may">
+                  <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, conc <br />
+                    tetur adipi scing. Praesent ibuum.
+                  </p>
+                  <a href="#" class="btn2">more info</a>
+                </li>
+              </ul>
+            </div>
+            <div class="preffix_1 grid_4 dash-vert">
+              <h2>Welcome to our site!</h2>
+
+              <div class="box">
+                <h3>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consec teer adipiscing. Prsent
+                    vestibulum.</a
+                  >
+                </h3>
+                <img src="images/index_img01.jpg" alt="Image 1" />
+                <p>
+                  Lorem ipsum dolor sit amet, conc tetur adipi scing. Praesent
+                  vestibuum molstie lacuiirhs. Aenean non ummy dreriauris.
+                  Phasellllus. porta. Fusce suscipit variusium sociis
+                  totdnatibus et magis dis parturient montes, nasceidiculus mus.
+                  Nulla dui. Fusce feugiatle. suada odio. Morbi nunc odio,
+                  gravida at.
+                </p>
+                <a href="#" class="btn2">more info</a>
+              </div>
+            </div>
+            <div class="preffix_1 grid_3 dash-vert">
+              <h2>Latest services</h2>
+              <div class="box">
+                <h3>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consec teer adipiscent
+                    vestibulum.</a
+                  >
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, conc tetur adipi scing. Praesent
+                  vestibuum molstie lacuiirhs. Aenean non ummy dreriauris.
+                  Phasellllus. porta. Fusce suscipit variusium sociis totdna
+                  <br />
+                  tibus et magis dis parturient montes, nas.
+                </p>
+              </div>
+
+              <div class="side-box">
+                <div class="side-box_aside">
+                  <img src="images/index_img02.png" alt="Image" />
+                </div>
+                <div class="side-box_cnt">
+                  <h3>
+                    <a href="#">
+                      Lorem ipsum dr sit ametnsec <br />
+                      teer adipiscent vestibulum.
+                    </a>
+                  </h3>
+                </div>
+                <a href="#" class="btn2"></a>
+              </div>
+              <div class="side-box">
+                <div class="side-box_aside">
+                  <img src="images/index_img03.png" alt="Image" />
+                </div>
+                <div class="side-box_cnt">
+                  <h3>
+                    <a href="#">
+                      Lorem ipsum dolor sit tnsec <br />
+                      teer adipiscent vestibulum.
+                    </a>
+                  </h3>
+                </div>
+                <a href="#" class="btn2"></a>
+              </div>
+              <div class="side-box">
+                <div class="side-box_aside">
+                  <img src="images/index_img04.png" alt="Image" />
+                </div>
+                <div class="side-box_cnt">
+                  <h3>
+                    <a href="#">
+                      Lorem ipsum dolor metnsec <br />
+                      teer adipiscent vestibulum.
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <a href="#" class="btn2">more info</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="grid_12">
+              <hr />
+              <div class="middle-box middle-box__off1">
+                <h2>Enjoy our relaxing warm ambiance during your vacation !</h2>
+                <a href="#" class="btn1"
+                  >Get in touch with us <span class="fa fa-comments"></span
+                ></a>
+              </div>
+              <hr />
+            </div>
+          </div>
+
+          <div class="row well__ins2">
+            <div class="grid_9">
+              <h2>Special promotions</h2>
+              <div class="row">
+                <div class="grid_3">
+                  <div class="box">
+                    <h3>
+                      <a href="#"><strong>Lorem opsum dolor</strong></a>
+                    </h3>
+                    <h4>consec. teer adipiscing.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consec tetuer adipisc ing.
+                      Praesent vestibulum molestie lacuiirhs. Aenean non ummy
+                      hendrerit
+                    </p>
+                  </div>
+                </div>
+                <div class="grid_3">
+                  <div class="box">
+                    <h3>
+                      <a href="#"><strong>consec. teer adipiscing</strong></a>
+                    </h3>
+                    <h4>dolor sit amet, consec. teer adipg.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consec tetuer adipisc ing.
+                      Praesent vestibulum molestie lacuiirhs. Aenean non ummy
+                      hendrerit
+                    </p>
+                  </div>
+                </div>
+                <div class="grid_3">
+                  <div class="box">
+                    <h3>
+                      <a href="#"><strong>Prsent vestibulum.</strong></a>
+                    </h3>
+                    <h4>onsec. teer adipiscing Prsent.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consec tetuer adipisc ing.
+                      Praesent vestibulum molestie lacuiirhs. Aenean non ummy
+                      hendrerit
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid_3">
+              <h2>Instagrams</h2>
+              <div class="box">
+                <h3><strong>tagged #hotels</strong></h3>
+
+                <div class="box_img-wrap">
+                  <a href="images/index_img05_big.jpg" data-type="lightbox"
+                    ><img src="images/index_img05.jpg" alt="Image"
+                  /></a>
+                  <a href="images/index_img06_big.jpg" data-type="lightbox"
+                    ><img src="images/index_img06.jpg" alt="Image"
+                  /></a>
+                  <a href="images/index_img07_big.jpg" data-type="lightbox"
+                    ><img src="images/index_img07.jpg" alt="Image"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </section>
+
+      <!--========================================================
+                                  FOOTER
+        =========================================================-->
+      <footer id="footer" class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="grid_12">
+              <p class="info">
+                <span id="copyright-year">2023</span> ©
+                <a href="index-5.html">Privacy Policy</a>
+                <!-- {%FOOTER_LINK} -->
+              </p>
+
+              <ul class="inline-list">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+              <ul class="socials">
+                <li><a href="#" class="fa fa-facebook">Facebook</a></li>
+                <li><a href="#" class="fa fa-twitter">Twitter</a></li>
+                <li><a href="#" class="fa fa-rss">RSS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- <script src="js/script.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/tmstickup.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.simplr.smoothscroll.min.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.unveil.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=0"
+    /> -->
+    <!-- <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-7078796-5"]);
+      _gaq.push(["_trackPageview"]);
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "https://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script> -->
+    <!-- Google Tag Manager -->
+    <!-- <noscript
+      ><iframe
+        src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P9FT69");
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <a
+      href="#"
+      id="toTop"
+      class="toTop fa fa-arrow-circle-o-up"
+      style="display: none"
+    ></a>
+    <div id="galleryOverlay" style="display: none">
+      <div id="gallerySlider">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+    </div>
+    <!-- <script type="text/javascript" id="">
+      (function () {
+        var b = document.location.search.split("aff\x3d")[1];
+        if (b) {
+          var d = document.querySelectorAll("a"),
+            c;
+          for (c = 0; c < d.length; c++) {
+            var a = d[c];
+            0 == a.href.indexOf("https://www.templatemonster.com") &&
+              (0 < a.href.indexOf("?")
+                ? (a.href = a.href + "\x26aff\x3d" + b)
+                : (a.href = a.href + "?aff\x3d" + b));
+          }
+        }
+        b = document.location.search.split("i\x3d")[1];
+        var e = document.location.search.split("pr_code\x3d")[1];
+        if (b && e)
+          for (
+            b = b.split("\x26")[0], d = document.querySelectorAll("a"), c = 0;
+            c < d.length;
+            c++
+          )
+            (a = d[c]),
+              0 == a.href.indexOf("https://www.templatemonster.com") &&
+                (a.href =
+                  "https://www.templatehelp.com/preset/cart.php?act\x3dadd\x26templ\x3d" +
+                  b +
+                  "\x26pr_code\x3d" +
+                  e);
+      })();
+    </script> -->
+  </body>
+</html>

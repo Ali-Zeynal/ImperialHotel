@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contacts</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/258de8b905.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/grid.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/contact-form.css" />
+
+    <!-- <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/TMForm.js"></script> -->
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+    <!--[if lt IE 9]>
+    <html class="lt-ie9">
+    <div id="ie6-alert" style="width: 100%; text-align:center; background: #232323;">
+        <img src="https://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0"
+             usemap="#Map" longdesc="https://die6.frontcube.com"/>
+        <map name="Map" id="Map">
+            <area shape="rect" coords="496,201,604,329"
+                  href="https://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank"
+                  alt="Download Interent Explorer"/>
+            <area shape="rect" coords="380,201,488,329" href="https://www.apple.com/safari/download/" target="_blank"
+                  alt="Download Apple Safari"/>
+            <area shape="rect" coords="268,202,376,330" href="https://www.opera.com/download/" target="_blank"
+                  alt="Download Opera"/>
+            <area shape="rect" coords="155,202,263,330" href="https://www.mozilla.com/" target="_blank"
+                  alt="Download Firefox"/>
+            <area shape="rect" coords="35,201,143,329" href="https://www.google.com/chrome" target="_blank"
+                  alt="Download Google Chrome"/>
+        </map>
+    </div>
+
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="page">
+      <!--========================================================
+                                  HEADER
+        =========================================================-->
+      <header id="header" class="header">
+        <div id="stuck_container" class="stuck_container">
+          <div class="container">
+            <div class="row">
+              <div class="grid_12">
+                <nav class="nav nav__ins1">
+                  <ul class="sf-menu">
+                    <li>
+                      <a href="./">Main page </a>
+                      <ul>
+                        <li><a href="#">About</a></li>
+                        <li>
+                          <a href="#">News</a>
+                        </li>
+                        <li>
+                          <a href="#">Courses</a>
+                          <ul>
+                            <li><a href="#">Columns 01</a></li>
+                            <li><a href="#">Columns 02</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="index-1.html">About us</a>
+                    </li>
+                    <li><a href="index-2.html">Rooms </a></li>
+                    <li>
+                      <a href="index-3.html">Offers & packages</a>
+                    </li>
+                    <li>
+                      <a href="index-4.html">Latest news</a>
+                    </li>
+                    <li class="active">
+                      <a href="index-5.html">Contacts</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="grid_12 center">
+              <hr />
+              <div class="brand">
+                <h1>
+                  <a href="./">Imperial<span>Hotel</span></a>
+                </h1>
+                <p>
+                  We offer you the best luxury hotel <br />
+                  with an impressive history
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--========================================================
+                                  CONTENT
+        =========================================================-->
+      <section id="content" class="content">
+        <div class="container">
+          <hr />
+          <div class="well well__ins3">
+            <div class="row">
+              <div class="grid_12">
+                <h2>How to find us</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="grid_12">
+                <div id="google-map" class="map"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="grid_3">
+                <address class="addr">
+                  <p>
+                    8901 Marmora Road, <br />
+                    Glasgow, D04 89GR.
+                  </p>
+                </address>
+              </div>
+              <div class="grid_3">
+                <address class="addr">
+                  <dl>
+                    <dt>Telephone:</dt>
+                    <dd>+1 800 603 6035</dd>
+                  </dl>
+                  <dl>
+                    <dt>FAX:</dt>
+                    <dd>+1 800 889 9898</dd>
+                  </dl>
+                  <p>
+                    E-mail:
+                    <a href="mailto:#">mail@demolink.org</a>
+                  </p>
+                </address>
+              </div>
+              <div class="grid_3">
+                <address class="addr">
+                  <p>
+                    9863 - 9867 Mill Road, <br />
+                    Cambridge, MG09 99HT.
+                  </p>
+                </address>
+              </div>
+              <div class="grid_3">
+                <address class="addr">
+                  <dl>
+                    <dt>Telephone:</dt>
+                    <dd>+1 800 603 6035</dd>
+                  </dl>
+                  <dl>
+                    <dt>FAX:</dt>
+                    <dd>+1 800 889 9898</dd>
+                  </dl>
+                  <p>
+                    E-mail:
+                    <a href="mailto:#">mail@demolink.org</a>
+                  </p>
+                </address>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="well">
+            <div class="row">
+              <div class="grid_12">
+                <h2>Contact form</h2>
+                <form id="contact-form">
+                  <div class="contact-form-loader"></div>
+                  <fieldset>
+                    <div class="row mg-add">
+                      <div class="grid_4">
+                        <label class="name">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Name: "
+                            value=""
+                            data-constraints="@Required @JustLetters"
+                          />
+
+                          <span class="empty-message"
+                            >*This field is required.</span
+                          >
+                          <span class="error-message"
+                            >*This is not a valid name.</span
+                          >
+                        </label>
+                      </div>
+                      <div class="grid_4">
+                        <label class="email">
+                          <input
+                            type="text"
+                            name="email"
+                            placeholder="E-mail: "
+                            value=""
+                            data-constraints="@Required @Email"
+                          />
+
+                          <span class="empty-message"
+                            >*This field is required.</span
+                          >
+                          <span class="error-message"
+                            >*This is not a valid email.</span
+                          >
+                        </label>
+                      </div>
+                      <div class="grid_4">
+                        <label class="phone">
+                          <input
+                            type="text"
+                            name="phone"
+                            placeholder="Phone:"
+                            value=""
+                            data-constraints="@JustNumbers"
+                          />
+
+                          <span class="empty-message"
+                            >*This field is required.</span
+                          >
+                          <span class="error-message"
+                            >*This is not a valid phone.</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+
+                    <label class="message">
+                      <textarea
+                        name="message"
+                        placeholder="Message: "
+                        data-constraints="@Required @Length(min=20,max=999999)"
+                      ></textarea>
+
+                      <span class="empty-message"
+                        >*This field is required.</span
+                      >
+                      <span class="error-message"
+                        >*The message is too short.</span
+                      >
+                    </label>
+
+                    <div class="btn-wr">
+                      <a class="btn2" href="#" data-type="reset">clear</a>
+                      <a class="btn2" href="#" data-type="submit">send</a>
+                    </div>
+                  </fieldset>
+                  <div class="modal fade response-message">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-hidden="true"
+                          >
+                            &times;
+                          </button>
+                          <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                          You message has been sent! We will be in touch soon.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+        </div>
+      </section>
+
+      <!--========================================================
+                                  FOOTER
+        =========================================================-->
+      <footer id="footer" class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="grid_12">
+              <p class="info">
+                <span id="copyright-year"></span> ©
+                <a href="index-6.html">Privacy Policy</a>
+              </p>
+
+              <ul class="inline-list">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+              <ul class="socials">
+                <li><a href="#" class="fa fa-facebook">Facebook</a></li>
+                <li><a href="#" class="fa fa-twitter">Twitter</a></li>
+                <li><a href="#" class="fa fa-rss">RSS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- <script src="js/script.js"></script> -->
+    <!-- Google Tag Manager -->
+    <noscript
+      ><iframe
+        src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P9FT69");
+    </script>
+    <!-- End Google Tag Manager -->
+  </body>
+</html>
