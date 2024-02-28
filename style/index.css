@@ -1,6 +1,10 @@
 @font-face {
+  font-family: "Playball-Regular";
+  src: url("../font/Playball-Regular.ttf"), format("ttf")
+}
+@font-face {
   font-family: "Playball";
-  src: url("../font/Playball-Regular.ttf"), format("ttf");
+  src: url("../font/Playball.ttf"), format("ttf")
 }
 @font-face {
   font-family: "OpenSans";
@@ -23,6 +27,66 @@
 body {
   background-image: url(../img/bodybg.jpg);
   font-family: "DroidSans";
+  visibility: hidden;
+}
+.loader {
+  visibility: visible !important;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: calc(50% - 20px);
+  z-index: 10;
+}
+.shapes-6 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh6-0 1.5s infinite linear;
+}
+.shapes-6:before,
+.shapes-6:after {
+  content: "";
+  grid-area: 1/1;
+  background: #f8aa48;
+  animation: sh6-1 1.5s infinite linear, sh6-2 1.5s infinite linear;
+}
+.shapes-6:after {
+  --s: -1;
+  animation-direction: reverse;
+}
+
+@keyframes sh6-0 {
+  0%,
+  9%,
+  91%,
+  100% {
+    background: #f8aa48;
+  }
+  10%,
+  90% {
+    background: #0000;
+  }
+}
+@keyframes sh6-1 {
+  0%,
+  33% {
+    clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+  }
+  66%,
+  100% {
+    clip-path: polygon(50% 0, 50% 100%, 50% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes sh6-2 {
+  0%,
+  10%,
+  90%,
+  100% {
+    transform: scale(var(--s, 1)) translateY(0);
+  }
+  33%,
+  66% {
+    transform: scale(var(--s, 1)) translateY(50%);
+  }
 }
 #cover {
   display: none;
@@ -174,10 +238,10 @@ img {
 .brand h1 {
   font-size: 140px;
   font-weight: normal;
-  font-family: "playball";
+  font-family: "playball" , "Playball-Regular";
 }
 .brand h1 a {
-  color: rgb(248, 170, 72);
+  color: #f8aa48;
 }
 .brand h1 a span {
   color: white;
@@ -272,6 +336,7 @@ img {
   -ms-transition: background-color 0.6s ease;
   -o-transition: background-color 0.6s ease;
 }
+
 .dots-container .dot:hover {
   background-color: rgba(248, 169, 72, 0.4);
   border: 2px solid rgba(248, 169, 72, 0.4);
@@ -314,7 +379,7 @@ img {
 }
 .top-section h2 {
   color: #fff;
-  font-family: "playball";
+  font-family: "playball" , "Playball-Regular";
   font-size: 30px;
   font-weight: normal;
   margin-bottom: 1.5rem;
@@ -405,7 +470,7 @@ img {
   border-bottom: 1px solid #2b2a28;
 }
 .middle-section h2 {
-  font-family: "playball";
+  font-family: "playball" ,"Playball-Regular";
   font-size: 34px;
   line-height: 43px;
   color: rgb(248, 170, 72);
@@ -444,7 +509,7 @@ img {
   border-bottom: 1px solid #2b2a28;
 }
 .bottom-section h2 {
-  font-family: "Playball";
+  font-family: "Playball" , "Playball-Regular";
   font-weight: 400;
   color: #fff;
   font-size: 30px;
