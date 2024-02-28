@@ -1181,12 +1181,12 @@
   }
   #contact-form input[type="text"],
   #contact-form textarea {
-    margin-top: 9%;
+    margin-top: 5%;
   }
   .name-input,
   .email-input,
   .phone-input {
-    width: 30%;
+    width: 32%;
   }
   #contact-form input[type="text"],
   #contact-form textarea {
