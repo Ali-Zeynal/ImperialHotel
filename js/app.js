@@ -22,11 +22,9 @@ window.addEventListener("scroll", function () {
 toTopBtn.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
-consol.log(window.location.pathname.slice(1));
 
 navMenuItem.forEach((item) => {
-consol.log(item.attributes.href.nodeValue);
-  if (window.location.pathname.slice(1) == item.attributes.href.nodeValue) {
+  if (window.location.pathname.slice(15) == item.attributes.href.nodeValue) {
     item.style.color = "rgb(248, 170, 72)";
   } else if (!window.location.pathname.slice(1)) {
     navMenuItem[0].style.color = "rgb(248, 170, 72)";
