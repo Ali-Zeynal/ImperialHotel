@@ -8,7 +8,7 @@ const formBottun = $.querySelectorAll(".contact-form-btn");
 const formModal = $.querySelector(".form-modal");
 const modalTitle = $.querySelector(".modal-title");
 const modalBody = $.querySelector(".modal-body");
-const darkCover = $.querySelector("#cover");
+let darkCover = $.querySelector("#cover");
 
 let errorsNumber = 0;
 
@@ -144,5 +144,5 @@ $.querySelector(".close-modal").addEventListener("click", () => {
 });
 darkCover.addEventListener("click", () => {
   formModal.style.top = "-150px";
-  darkCover.classList.toggle("covering");
+  MobileMenuCheckbox.click();
 });
