@@ -1,4 +1,4 @@
-/* Extra large devices (large laptops and desktops, 1200px and up)
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
 @media only screen and (max-width: 1440px) {
   .menu-container {
     height: 85px;
@@ -844,16 +844,16 @@
   }
   .mobile-nav {
     position: fixed;
-    margin: 1rem;
+    margin: 1.5rem 1.5rem 0rem 0rem;
     right: 0;
     z-index: 3;
     height: 100vh;
   }
   .line {
-    border-bottom: 1px solid #fff;
-    width: 14px;
+    border-bottom: 2px solid #fff;
+    width: 20px;
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     transition: all 260ms ease-out;
     -webkit-transition: all 260ms ease-out;
     -moz-transition: all 260ms ease-out;
@@ -1078,10 +1078,10 @@
     font-size: 13px;
   }
   .nav-mobile-list li a {
-    font-size: 10px;
+    font-size: 13px;
   }
   .nav-mobile-list li {
-    margin: 0.5rem 0 0 1rem;
+    margin: 1rem 0 0 1rem;
   }
   .offers {
     max-width: 275px;
@@ -1095,6 +1095,7 @@
     margin-left: 0%;
     margin-right: 0%;
     margin-top: 5%;
+    width: 85%;
   }
   .offer-item:nth-child(n + 1) {
     margin-top: 10%;
@@ -1120,6 +1121,9 @@
     max-width: 275px;
   }
   .news-img {
+    width: 100%;
+  }
+  .news-img img {
     width: 100%;
   }
   .news-date time span {
@@ -1274,4 +1278,4 @@
   .footer-container {
     max-width: 300px;
   }
-} 
+}
