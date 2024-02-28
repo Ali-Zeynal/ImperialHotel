@@ -1,0 +1,189 @@
+.section-container {
+  max-width: 1150px;
+  margin: 2% auto;
+  border-top: 1px solid #2b2a28;
+  border-bottom: 1px solid #2b2a28;
+  padding: 3% 0;
+}
+.find-us {
+  margin-bottom: 5%;
+}
+.find-us h2,
+.contact-form h2 {
+  font-family: "Playball";
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 2%;
+  font-weight: normal;
+}
+.contact-form {
+  margin-top: 2%;
+  border-top: 1px solid #2b2a28;
+  padding-top: 5%;
+}
+.address-container {
+  display: flex;
+}
+.adrees-box {
+  width: 50%;
+}
+.addr > p:first-child {
+  color: #f8aa48;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Asap";
+  text-transform: uppercase;
+}
+.addr {
+  margin-top: 2%;
+}
+
+.addr dl dt,
+.addr dl dd,
+.addr p:nth-child(3) {
+  display: inline-block;
+  color: #b0a59f;
+  font-size: 13px;
+  line-height: 18px;
+}
+.addr p:nth-child(3) a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+#contact-form fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+}
+.name-input,
+.email-input,
+.phone-input {
+  width: 32.5%;
+}
+.message {
+  width: 100%;
+}
+.message textarea {
+  height: 175px;
+  margin-top: 1%;
+}
+.message textarea::placeholder,
+#contact-form input[type="text"]::placeholder {
+  color: #b0a59f;
+}
+.message textarea:focus::placeholder,
+#contact-form input[type="text"]:focus::placeholder {
+  opacity: 0.4;
+}
+#contact-form label {
+  position: relative;
+}
+#contact-form input[type="text"],
+#contact-form textarea {
+  background-color: #2b2a28;
+  border: 1px solid #363634;
+  width: 100%;
+  border-radius: 0;
+  outline: none;
+  line-height: 20px;
+  font-size: 12px;
+  font-family: "DroidSans";
+  padding: 10px 20px 11px;
+  color: #b0a59f;
+}
+#contact-form .empty-message,
+#contact-form .error-message {
+  position: absolute;
+  right: 1%;
+  top: 0;
+  color: red;
+  height: 0px;
+  overflow: hidden;
+  font-size: 11px;
+  z-index: 1;
+  transition: height 0.3s ease-in;
+  -ms-transition: height 0.3s ease-in;
+  -moz-transition: height 0.3s ease-in;
+  -o-transition: height 0.3s ease-in;
+  -webkit-transition: height 0.3s ease-in;
+}
+.message textarea + .empty-message,
+.message textarea + span + .error-message {
+  right: 1% !important;
+  top: 10% !important;
+}
+
+#contact-form .invalid .error-message,
+#contact-form .empty .empty-message {
+  height: 20px;
+}
+.form-button {
+  width: 100%;
+  margin-top: 2%;
+}
+.contact-form-btn {
+  display: inline-block;
+  font-family: "Asap";
+  color: white;
+  font-size: 13px;
+  margin-top: 0 !important;
+}
+.contact-form-btn:last-child {
+  margin-left: 4%;
+}
+.form-modal {
+  top: -150px;
+  left: calc(50% - 220px);
+  position: fixed;
+  width: 440px;
+  min-height: 150px;
+  border-radius: 20px;
+  z-index: 2;
+  transition: top 0.5s ease;
+  -webkit-transition: top 0.5s ease;
+  -moz-transition: top 0.5s ease;
+  -ms-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.success {
+  background-color: #00a61694;
+}
+.error {
+  background-color: #ff3e3e85;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  margin-left: 2.5%;
+  font-family: "playball";
+  font-size: 25px;
+}
+.close-modal {
+  border: none;
+  background: 0;
+  font-size: x-large !important;
+  margin: 2%;
+  cursor: pointer;
+}
+.modal-title {
+  height: fit-content;
+  margin-left: 3%;
+}
+.form-modal hr {
+  width: 90%;
+  background: #000000;
+  opacity: 1;
+}
+.modal-body {
+  margin: 2% 0 0 5%;
+  width: fit-content;
+  font-family: "Asap";
+  font-size: 18px;
+}

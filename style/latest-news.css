@@ -1,0 +1,75 @@
+.latest-news {
+  max-width: 1150px;
+  border-top: 1px solid #2b2a28;
+  border-bottom: 1px solid #2b2a28;
+  padding: 3% 0;
+  margin: 3% auto;
+}
+.latest-news h2 {
+  color: #fff;
+  font-weight: normal;
+  font-family: "Playball";
+  font-size: 30px;
+}
+.news-box {
+  margin-top: 3%;
+  display: flex;
+}
+.news-date {
+  margin-right: 5%;
+}
+.news-date time {
+  font-size: 17px;
+  color: #b0a59f;
+}
+.news-date time span {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #f8aa48;
+}
+.news-date time + p {
+  margin-top: 10px;
+}
+.news-date p {
+  color: white;
+}
+.news-date p a {
+  color: #f8aa48;
+}
+.news-date p strong {
+  display: flex;
+  font-family: "Asap";
+  font-size: 15px;
+}
+.news-img {
+  width: fit-content;
+}
+.news-box:not(:first-child) {
+  margin-top: 5%;
+}
+.news-box:not(:last-child) {
+  border-bottom: 1px solid #2b2a28;
+  padding-bottom: 4%;
+}
+.news-content {
+  margin-left: 2%;
+}
+.news-content p {
+  color: #b0a59f;
+  font-size: 13px;
+  line-height: 17px;
+  margin-top: 2%;
+}
+.news-title {
+  color: #f8aa48;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Asap";
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.more-info {
+  margin-top: 5% !important;
+}

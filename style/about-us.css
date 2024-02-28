@@ -1,0 +1,196 @@
+section {
+  padding-top: 3rem;
+}
+.about-us {
+  max-width: 1150px;
+  margin: auto;
+  border-top: 1px solid #2b2a28;
+  border-bottom: 1px solid #2b2a28;
+  padding: 3% 0;
+}
+.aboutUs-container {
+  display: flex;
+  margin-top: 2%;
+}
+.aboutUs-title {
+  font-family: "playball";
+  font-weight: normal;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+}
+.aboutUs-caption h3 {
+  font-family: "Asap";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #f8aa48;
+}
+.aboutUs-caption p {
+  font-size: 13px;
+  line-height: 17px;
+  color: rgb(176, 165, 159);
+  margin-top: 5%;
+}
+.aboutUs-content {
+  display: flex;
+  padding-right: 3%;
+  border-right: 1px solid #2b2a28;
+}
+.aboutUs-content img {
+  height: fit-content;
+}
+.aboutUs-links {
+  width: 75%;
+  margin-left: 3%;
+}
+.aboutUs-caption {
+  margin-left: 3%;
+  width: 60%;
+}
+.marked-list li a {
+  font-size: 13px;
+  line-height: 20px;
+  color: #f8aa48;
+  font-family: "Asap";
+}
+.marked-list li {
+  position: relative;
+  padding-left: 19px;
+  margin-top: 4%;
+}
+.marked-list li:first-child {
+  margin-top: 0;
+}
+.marked-list li:before {
+  content: "\f105";
+  font-size: 15px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: 400 20px "FontAwesome";
+  line-height: inherit;
+  color: #b0a59f;
+  margin-top: 1.2%;
+}
+.aboutUs-mid {
+  max-width: 1150px;
+  margin: 3% auto 0 auto;
+  display: flex;
+  border-bottom: 1px solid #2b2a28;
+  padding-bottom: 3%;
+}
+.aboutUs-mid > div > h2 {
+  font-family: "Playball";
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+}
+.index-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  border-right: 1px solid #2b2a28;
+  padding-right: 2%;
+}
+.index-list li {
+  position: relative;
+  border: 1px solid #363634;
+  background: #2b2a28;
+  margin-right: 5%;
+  margin-top: 5%;
+  padding: 5% 4% 4% 20%;
+}
+.index-list li::before {
+  content: attr(data-index);
+  position: absolute;
+  top: 12%;
+  left: 7%;
+  font: 700 30px / 30px "Asap";
+  color: white;
+}
+.Testimonials {
+  width: 66%;
+  margin-left: 5%;
+}
+.quote:nth-child(2) {
+  margin-top: 5%;
+}
+.quote:last-child {
+  margin-top: 7%;
+}
+.quote:not(:last-child) {
+  border-bottom: 1px solid #2b2a28;
+  padding-bottom: 8%;
+}
+.quote h3 {
+  margin-top: 10%;
+}
+.quote h3 strong {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #f8aa48;
+  font-family: "Asap";
+}
+.quote h4 a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 18px;
+}
+.quote p {
+  color: #b0a59f;
+  font-size: 13px;
+  line-height: 17px;
+}
+.box_inner h3 a {
+  color: #f8aa48;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Asap";
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.box_inner p {
+  color: #b0a59f;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 5%;
+}
+.our-staff {
+  max-width: 1150px;
+  margin: 3% auto 0 auto;
+  border-bottom: 1px solid #2b2a28;
+  padding-bottom: 3%;
+}
+.staff-container {
+  display: flex;
+  justify-content: space-between;
+}
+.our-staff > h2 {
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-family: "Playball";
+  font-weight: normal;
+  color: #fff;
+}
+.staff-list > h3 {
+  color: #f8aa48;
+  margin-top: 12%;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.staff-list {
+  width: min-content;
+}
+.staff-list > p {
+  color: #b0a59f;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 17px;
+  margin-top: 4%;
+}

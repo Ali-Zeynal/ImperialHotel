@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Imperial hotel | Contacts us</title>
+    <link href="style/index.css" rel="stylesheet" />
+    <link href="style/contacts-us.css" rel="stylesheet" />
+    <link href="style/app.css" rel="stylesheet" />
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/258de8b905.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="cover"></div>
+    <a class="toTop-btn"></a>
+    <div class="form-modal">
+      <div class="modal-header">
+        <button type="button" class="close-modal">×</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <hr />
+      <div class="modal-body">
+        You message has been sent! We will be in touch soon.
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="menu-container">
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html">MAIN PAGE</a>
+            </li>
+            <li>
+              <a href="about-us.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="rooms.html">ROOMS</a>
+            </li>
+            <li>
+              <a href="offers.html">OFFERS & PACKAGES</a>
+            </li>
+            <li>
+              <a href="latest-news.html">LATEST NEWS</a>
+            </li>
+            <li>
+              <a href="contacts-us.html">CONTACTS US</a>
+            </li>
+          </ul>
+          <div class="mobile-nav">
+            <input id="nav-toggle" type="checkbox" />
+            <label class="nav-toggle-label" for="nav-toggle"
+              ><span class="line line-top"></span>
+              <span class="line line-middle"></span>
+              <span class="line line-bottom"></span
+            ></label>
+            <ul class="nav-mobile-list">
+              <li>
+                <a href="index.html">MAIN PAGE</a>
+              </li>
+              <li>
+                <a href="about-us.html">ABOUT US</a>
+              </li>
+              <li>
+                <a href="rooms.html">ROOMS</a>
+              </li>
+              <li>
+                <a href="offers.html">OFFERS & PACKAGES</a>
+              </li>
+              <li>
+                <a href="latest-news.html">LATEST NEWS</a>
+              </li>
+              <li>
+                <a href="contacts-us.html">CONTACTS US</a>
+              </li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+      </nav>
+      <div class="brand">
+        <h1>
+          <a href="./index.html">Imperial <span>Hotel</span></a>
+        </h1>
+        <p>
+          We offer you the best luxury hotel<br />
+          with an impressive history
+        </p>
+      </div>
+    </header>
+    <section>
+      <div class="section-container">
+        <div class="find-us">
+          <h2>How to find us</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.3367747621455!2d-0.058263623102867056!3d51.451972914750485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603c82a306821%3A0xa38eb1d301bf8621!2sMarmora%20Rd%2C%20London%2C%20UK!5e0!3m2!1sen!2s!4v1708817699427!5m2!1sen!2s"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen="true"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="address-container">
+            <div class="adrees-box">
+              <address class="addr">
+                <p>
+                  8901 Marmora Road, <br />
+                  Glasgow, D04 89GR.
+                </p>
+              </address>
+              <address class="addr">
+                <dl>
+                  <dt>Telephone:</dt>
+                  <dd>+1 800 603 6035</dd>
+                </dl>
+                <dl>
+                  <dt>FAX:</dt>
+                  <dd>+1 800 889 9898</dd>
+                </dl>
+                <p>
+                  E-mail:
+                  <a href="mailto:#">mail@demolink.org</a>
+                </p>
+              </address>
+            </div>
+            <div class="adrees-box">
+              <address class="addr">
+                <p>
+                  9863 - 9867 Mill Road, <br />
+                  Cambridge, MG09 99HT.
+                </p>
+              </address>
+              <address class="addr">
+                <dl>
+                  <dt>Telephone:</dt>
+                  <dd>+1 800 603 6035</dd>
+                </dl>
+                <dl>
+                  <dt>FAX:</dt>
+                  <dd>+1 800 889 9898</dd>
+                </dl>
+                <p>
+                  E-mail:
+                  <a href="mailto:#">mail@demolink.org</a>
+                </p>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2>Contact form</h2>
+          <form id="contact-form" method="POST">
+            <fieldset>
+              <div class="name-input">
+                <label class="name" for="name">
+                  <input type="text" name="name" value="" placeholder="Name:" />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid name.</span>
+                </label>
+              </div>
+              <div class="email-input">
+                <label class="email" for="email">
+                  <input
+                    type="text"
+                    name="email"
+                    value=""
+                    placeholder="E-mail:"
+                  />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid email.</span>
+                </label>
+              </div>
+              <div class="phone-input">
+                <label class="phone" for="phone">
+                  <input
+                    type="text"
+                    name="phone"
+                    value=""
+                    placeholder="Phone:"
+                  />
+                  <span class="empty-message">*This field is required.</span>
+                  <span class="error-message">*This is not a valid phone.</span>
+                </label>
+              </div>
+              <label class="message" for="message">
+                <textarea name="message" placeholder="Message:"></textarea>
+                <span class="empty-message">*This field is required.</span>
+                <span class="error-message">*The message is too short.</span>
+              </label>
+              <div class="form-button">
+                <a
+                  class="contact-form-btn more-info a"
+                  href="#"
+                  data-type="reset"
+                  >clear</a
+                >
+                <a
+                  class="contact-form-btn more-info b"
+                  href="#"
+                  data-type="submit"
+                  >send</a
+                >
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p class="privacy">
+            2024 &copy; <a href="index-5.html">Privacy Policy</a>
+          </p>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">FAQs</a>
+            </li>
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+            <li>
+              <a href="#">Help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="socials">
+          <ul>
+            <li>
+              <a href="#" title="facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" title="twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#" title="instagram"><i class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

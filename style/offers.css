@@ -1,0 +1,97 @@
+.offers {
+  max-width: 1150px;
+  margin: 3% auto 0;
+  border-top: 1px solid #2b2a28;
+  border-bottom: 1px solid #2b2a28;
+  padding: 3% 0 3% 0;
+}
+.offers h2 {
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 3%;
+  font-family: "playball";
+  font-weight: normal;
+}
+.offers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.offer-item {
+  display: flex;
+  width: calc(100% / 3);
+}
+.offers-content {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.offer-item:nth-child(n + 4) {
+  margin-top: 3%;
+}
+.offers-content h3 a {
+  color: #f8aa48;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Asap", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.offers-content p {
+  font-size: 13px;
+  line-height: 17px;
+  color: #b0a59f;
+}
+.package {
+  max-width: 1150px;
+  margin: 3% auto 0;
+  border-bottom: 1px solid #2b2a28;
+  padding-bottom: 3%;
+}
+.package h2 {
+  margin-top: 2%;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Playball";
+  font-weight: normal;
+}
+.package-container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.package-container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.packages-item {
+  width: min-content;
+  background: #2b2a28;
+  border: 1px solid #363634;
+}
+.packages-item:nth-child(n + 4) {
+  margin-top: 2%;
+}
+.packages-item img {
+  border-bottom: 1px solid #363634;
+}
+.package-content {
+  margin: 10% 5% 11% 6%;
+}
+.package-content h3 a {
+  color: #f8aa48;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Asap", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.package-content p {
+  color: #b0a59f;
+  font-size: 13px;
+  line-height: 17px;
+  margin-top: 4%;
+}

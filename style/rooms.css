@@ -1,0 +1,128 @@
+.rooms-container {
+  max-width: 1150px;
+  margin: 2% auto;
+  border-top: 1px solid #2b2a28;
+  border-bottom: 1px solid #2b2a28;
+  padding: 2% 0;
+}
+.our-rooms {
+  padding-bottom: 3%;
+  border-bottom: 1px solid #2b2a28;
+  margin-bottom: 3%;
+}
+.rooms-container h2 {
+  font-family: "playball";
+  font-weight: normal;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 2%;
+}
+.filter-menu {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+.filter-menu .filter-item {
+  position: relative;
+}
+.filter-menu .filter-item a {
+  font-family: "Asap";
+  color: #f8aa48;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 256ms ease-in;
+  -webkit-transition: all 256ms ease-in;
+  -moz-transition: all 256ms ease-in;
+  -ms-transition: all 256ms ease-in;
+  -o-transition: all 256ms ease-in;
+}
+.filter-menu .filter-item a:hover {
+  text-decoration: none !important;
+  color: #fff;
+}
+.filter-menu .filter-item a.active {
+  color: #fff;
+}
+.filter-menu .filter-item:not(.filter-menu .filter-item:first-child)::before {
+  content: " ";
+  width: 1px;
+  height: 9px;
+  background: rgba(255, 255, 255, 0.274);
+  position: absolute;
+  top: 25%;
+  left: -30px;
+}
+.rooms-card-container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.rooms-card {
+  display: block;
+  margin: 16px;
+  margin-left: 0;
+  width: min-content;
+  background: #2b2a28;
+  border: 1px solid #363634;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+}
+.rooms-card img {
+  border-bottom: 1px solid #363634;
+}
+.rooms-card-content {
+  margin: 10% 5% 11% 6%;
+}
+.rooms-card-content h3 a {
+  color: #f8aa48;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Asap", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.rooms-card-content p {
+  color: #b0a59f;
+  font-size: 13px;
+  line-height: 17px;
+  margin-top: 4%;
+}
+
+.rooms-link-container {
+  display: flex;
+  justify-content: space-between;
+}
+.link-item a {
+  font-size: 13px;
+  line-height: 20px;
+  color: #f8aa48;
+  font-family: "Asap";
+}
+.link-item {
+  position: relative;
+  padding-left: 19px;
+  margin-top: 5%;
+}
+.link-item::before {
+  content: "\f105";
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "FontAwesome";
+  line-height: inherit;
+  color: #b0a59f;
+  margin-top: 1.2%;
+}
+.rooms-card-content .more-info {
+  margin-top: 20%;
+}
