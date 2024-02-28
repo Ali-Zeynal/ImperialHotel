@@ -96,11 +96,6 @@ function clearInputHandler() {
   errorsNumber = 0;
 }
 
-// $.querySelector("*:not(.form-button>.contact-form-btn)").addEventListener("click", () => {
-//   formModal.style.top = "-150px";
-//   console.log("ok");
-// });
-
 formBottun.forEach((btn) => {
   if (btn.dataset.type == "reset") {
     btn.addEventListener("click", (e) => {
