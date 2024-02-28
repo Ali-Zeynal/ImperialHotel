@@ -1,11 +1,16 @@
 const MobileMenuButton = document.querySelector(".nav-toggle-label");
+const MobileMenuCheckbox = document.querySelector("#nav-toggle");
 const toTopBtn = document.querySelector(".toTop-btn");
 let navMenuItem = document.querySelectorAll(".nav-menu li a");
+let menuDarkCover = document.querySelector("#cover");
 
 MobileMenuButton.addEventListener("click", () => {
   cover.classList.toggle("covering");
 });
-
+menuDarkCover.addEventListener("click", () => {
+  menuDarkCover.classList.toggle("covering");
+  MobileMenuCheckbox.click();
+});
 window.addEventListener("scroll", function () {
   if (window.scrollY > 380 && document.documentElement.clientWidth > 600) {
     toTopBtn.style.opacity = "1";
