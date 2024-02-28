@@ -628,8 +628,8 @@
     bottom: 3%;
   }
   .dots-container .dot {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border: 1px solid #ffffff;
   }
   .top-section {
