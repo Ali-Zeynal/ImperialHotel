@@ -30,3 +30,15 @@ navMenuItem.forEach((item) => {
     navMenuItem[0].style.color = "rgb(248, 170, 72)";
   }
 });
+
+window.addEventListener("load", function () {
+  document.querySelector(".loader").style.display = "none";
+  document.querySelector("body").style.visibility = "visible";  
+});
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   setTimeout(() => {
+//     document.querySelector(".loader").style.display = "none";
+//     document.querySelector("body").style.visibility = "visible";
+//   }, 1500);
+// });
