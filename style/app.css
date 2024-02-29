@@ -386,10 +386,11 @@
   .rooms-card img {
     width: 169px;
   }
-  .filter-menu {
+  .filter-menu-btn {
     width: 50%;
   }
-  .filter-menu .filter-item:not(.filter-menu .filter-item:first-child)::before {
+  .filter-menu-btn
+    .filter-item:not(.filter-menu-btn .filter-item:first-child)::before {
     top: 30%;
     left: -20px;
   }
@@ -576,7 +577,7 @@
   .rooms-container {
     max-width: 600px;
   }
-  .filter-menu .filter-item a {
+  .filter-menu-btn .filter-item a {
     font-size: 11px;
   }
   .rooms-card {
@@ -588,6 +589,14 @@
   }
   .rooms-container h2 {
     font-size: 25px;
+  }
+  .filter-menu-btn {
+    width: 55%;
+  }
+  .filter-menu-btn
+    .filter-item:not(.filter-menu-btn .filter-item:first-child)::before {
+    top: 30%;
+    left: -15px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -803,10 +812,10 @@
   .rooms-container {
     max-width: 500px;
   }
-  .filter-menu .filter-item a {
+  .filter-menu-btn .filter-item {
     font-size: 10px;
   }
-  .filter-menu {
+  .filter-menu-btn {
     width: 60%;
   }
   .rooms-card img {
@@ -1220,15 +1229,16 @@
   .rooms-container h2 {
     font-size: 20px;
   }
-  .filter-menu {
+  .filter-menu-btn {
     width: 100%;
     margin-bottom: 5%;
   }
-  .filter-menu .filter-item a {
+  .filter-menu-btn .filter-item {
     font-size: 9px;
   }
-  .filter-menu .filter-item:not(.filter-menu .filter-item:first-child)::before {
-    top: 35%;
+  .filter-menu-btn
+    .filter-item:not(.filter-menu-btn .filter-item:first-child)::before {
+    top: 15%;
     left: -18px;
   }
   .rooms-card-container {
