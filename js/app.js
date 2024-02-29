@@ -26,7 +26,6 @@ toTopBtn.addEventListener("click", function () {
 });
 
 navMenuItem.forEach((item) => {
-  console.log(item.attributes.href.nodeValue);
   if (window.location.pathname.slice(15) == item.attributes.href.nodeValue) {
     item.style.color = "rgb(248, 170, 72)";
   } else if (!window.location.pathname.slice(15)) {
