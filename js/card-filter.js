@@ -1,35 +1,36 @@
-const $ = document;
-const filterMenuItems = $.querySelectorAll(".filter-item");
+const filterMenu = $.querySelector(".filter-menu-btn");
+const filterButton = $.querySelectorAll(".filter-item");
 const roomsCard = $.querySelectorAll(".rooms-card");
 
-filterMenuItems.forEach((menuItem) => {
-  menuItem.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (!e.target.classList.contains("active")) {
-      const activeFilter = $.querySelector(".filter-item .active");
-      e.target.classList.add("active");
-      activeFilter.classList.remove("active");
+filterButton.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const filter = e.target.dataset.filter;
+
+    if (!document.startViewTransition) {
+      updateActiveButton(e.target);
+      filtering(filter);
     }
-    let filterId = e.target.dataset.filter;
-    roomsCard.forEach((box) => {
-      if (filterId == "*") {
-        box.style.opacity = 1;
-        displayChanger(box, "block");
-      } else if (e.target.classList.contains("filter-item")) {
-        return;
-      } else if (box.classList.contains(filterId)) {
-        box.style.opacity = 1;
-        displayChanger(box, "block");
-      } else if (!box.classList.contains(filterId)) {
-        box.style.opacity = 0;
-        displayChanger(box, "none");
-      }
+    document.startViewTransition(() => {
+      updateActiveButton(e.target);
+      filtering(filter);
     });
   });
 });
 
-function displayChanger(box, value) {
-  setTimeout(() => {
-    box.style.display = value;
-  }, 250);
+function updateActiveButton(newButton) {
+  filterMenu.querySelector(".active").classList.remove("active");
+  newButton.classList.add("active");
+}
+
+function filtering(filterRoom) {
+  roomsCard.forEach((card) => {
+    const cardCategory = card.dataset.card;
+    console.log();
+
+    if (filterRoom === "all" || filterRoom === cardCategory) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
 }
