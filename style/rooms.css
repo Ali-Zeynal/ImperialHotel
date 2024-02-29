@@ -11,14 +11,14 @@
   margin-bottom: 3%;
 }
 .rooms-container h2 {
-  font-family: "playball";
+  font-family: "playball", "Playball-Regular";
   font-weight: normal;
   color: white;
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 2%;
 }
-.filter-menu {
+.filter-menu-btn {
   display: flex;
   list-style: none;
   height: 100%;
@@ -26,10 +26,11 @@
   justify-content: space-between;
   width: 40%;
 }
-.filter-menu .filter-item {
+.filter-menu-btn .filter-item {
+  border: none;
+  background: none;
+  cursor: pointer;
   position: relative;
-}
-.filter-menu .filter-item a {
   font-family: "Asap";
   color: #f8aa48;
   font-size: 13px;
@@ -41,14 +42,15 @@
   -ms-transition: all 256ms ease-in;
   -o-transition: all 256ms ease-in;
 }
-.filter-menu .filter-item a:hover {
+.filter-menu-btn .filter-item:hover {
   text-decoration: none !important;
   color: #fff;
 }
-.filter-menu .filter-item a.active {
+.filter-menu-btn .filter-item.active {
   color: #fff;
 }
-.filter-menu .filter-item:not(.filter-menu .filter-item:first-child)::before {
+.filter-menu-btn
+  .filter-item:not(.filter-menu-btn .filter-item:first-child)::before {
   content: " ";
   width: 1px;
   height: 9px;
@@ -61,20 +63,19 @@
   margin-top: 2%;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 .rooms-card {
   display: block;
+  width: min-content;
   margin: 16px;
   margin-left: 0;
-  width: min-content;
   background: #2b2a28;
   border: 1px solid #363634;
-  transition: all 0.25s ease-out;
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  -ms-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
 }
 .rooms-card img {
   border-bottom: 1px solid #363634;
@@ -125,4 +126,8 @@
 }
 .rooms-card-content .more-info {
   margin-top: 20%;
+}
+::view-transition-group(root) {
+  animation-duration: 0.5s;
+  mix-blend-mode: none;
 }
