@@ -144,5 +144,7 @@ $.querySelector(".close-modal").addEventListener("click", () => {
 });
 darkCover.addEventListener("click", () => {
   formModal.style.top = "-150px";
-  MobileMenuCheckbox.click();
+  if (MobileMenuCheckbox.checked) {
+    MobileMenuCheckbox.click();
+  }
 });
