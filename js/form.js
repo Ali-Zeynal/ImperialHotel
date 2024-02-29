@@ -1,4 +1,3 @@
-const $ = document;
 const formLabel = $.querySelectorAll("fieldset label");
 const nameInput = $.querySelector(".name > input");
 const emailInput = $.querySelector(".email > input");
@@ -96,6 +95,22 @@ function clearInputHandler() {
   errorsNumber = 0;
 }
 
+// function conv2EnNum(num) {
+//   return parseFloat(
+//     num
+//       .replace(/[۰۱۲۳۴۵۶۷۸۹]/g, function (d) {
+//         return d.charCodeAt(0) - 1632;
+//       })
+//       .replace(
+//         (/[۰۱۲۳۴۵۶۷۸۹]/g,
+//         function (d) {
+//           return d.charCodeAt(0) - 1776;
+//         })
+//       )
+//   );
+// }
+// let enPhoneNumber = conv2EnNum("۰۱۲۳۴۵۶");
+// console.log(enPhoneNumber);
 formBottun.forEach((btn) => {
   if (btn.dataset.type == "reset") {
     btn.addEventListener("click", (e) => {
@@ -142,6 +157,7 @@ $.querySelector(".close-modal").addEventListener("click", () => {
   formModal.style.top = "-150px";
   darkCover.classList.toggle("covering");
 });
+
 darkCover.addEventListener("click", () => {
   formModal.style.top = "-150px";
   if (MobileMenuCheckbox.checked) {
