@@ -1,39 +1,36 @@
-const MobileMenuButton = document.querySelector(".nav-toggle-label");
-const MobileMenuCheckbox = document.querySelector("#nav-toggle");
-const toTopBtn = document.querySelector(".toTop-btn");
-let navMenuItem = document.querySelectorAll(".nav-menu li a");
-let menuDarkCover = document.querySelector("#cover");
+const filterMenu = $.querySelector(".filter-menu-btn");
+const filterButton = $.querySelectorAll(".filter-item");
+const roomsCard = $.querySelectorAll(".rooms-card");
 
-MobileMenuButton.addEventListener("click", () => {
-  menuDarkCover.classList.toggle("covering");
+filterButton.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const filter = e.target.dataset.filter;
+
+    if (!document.startViewTransition) {
+      updateActiveButton(e.target);
+      filtering(filter);
+    }
+    document.startViewTransition(() => {
+      updateActiveButton(e.target);
+      filtering(filter);
+    });
+  });
 });
 
-menuDarkCover.addEventListener("click", () => {
-  MobileMenuCheckbox.click();
-  menuDarkCover.classList.toggle("covering");
-});
+function updateActiveButton(newButton) {
+  filterMenu.querySelector(".active").classList.remove("active");
+  newButton.classList.add("active");
+}
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 380 && document.documentElement.clientWidth > 600) {
-    toTopBtn.style.opacity = "1";
-  } else {
-    toTopBtn.style.opacity = "0";
-  }
-});
+function filtering(filterRoom) {
+  roomsCard.forEach((card) => {
+    const cardCategory = card.dataset.card;
+    console.log();
 
-toTopBtn.addEventListener("click", function () {
-  window.scrollTo(0, 0);
-});
-
-navMenuItem.forEach((item) => {
-  if (window.location.pathname.slice(15) == item.attributes.href.nodeValue) {
-    item.style.color = "rgb(248, 170, 72)";
-  } else if (!window.location.pathname.slice(15)) {
-    navMenuItem[0].style.color = "rgb(248, 170, 72)";
-  }
-});
-
-window.addEventListener("load", function () {
-  document.querySelector(".loader").style.display = "none";
-  document.querySelector("body").style.visibility = "visible";
-});
+    if (filterRoom === "all" || filterRoom === cardCategory) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
