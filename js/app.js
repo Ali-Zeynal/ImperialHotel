@@ -29,7 +29,7 @@ navMenuItem.forEach((item) => {
   console.log(item.attributes.href.nodeValue);
   if (window.location.pathname.slice(15) == item.attributes.href.nodeValue) {
     item.style.color = "rgb(248, 170, 72)";
-  } else if (!window.location.pathname.slice(1)) {
+  } else if (!window.location.pathname.slice(15)) {
     navMenuItem[0].style.color = "rgb(248, 170, 72)";
   }
 });
