@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="loader">
-      <div class="shapes-6" ></div>
+      <div class="shapes-6"></div>
     </div>
     <div id="cover"></div>
     <a class="toTop-btn"></a>
@@ -88,22 +88,16 @@
       <div class="rooms-container">
         <div class="our-rooms">
           <h2>Our Rooms</h2>
-          <ul class="filter-menu">
-            <li class="filter-item">
-              <a href="#" data-filter="*" class="active">all</a>
-            </li>
-            <li class="filter-item">
-              <a href="#" data-filter="c1">pendisse</a>
-            </li>
-            <li class="filter-item">
-              <a href="#" data-filter="c2">commodo</a>
-            </li>
-            <li class="filter-item">
-              <a href="#" data-filter="c3">tempor sagittis</a>
-            </li>
-          </ul>
-          <div class="rooms-card-container">
-            <div class="rooms-card c2">
+          <div class="filter-menu-btn">
+            <button class="filter-item active" data-filter="all">all</button>
+            <button class="filter-item" data-filter="pendisse">pendisse</button>
+            <button class="filter-item" data-filter="commodo">commodo</button>
+            <button class="filter-item" data-filter="tempor">
+              tempor sagittis
+            </button>
+          </div>
+          <ul class="rooms-card-container">
+            <li class="rooms-card" data-card="commodo">
               <img src="img/index-2_img01.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -113,8 +107,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c1">
+            </li>
+            <li class="rooms-card" data-card="pendisse">
               <img src="img/index-2_img02.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -124,8 +118,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c2">
+            </li>
+            <li class="rooms-card" data-card="commodo">
               <img src="img/index-2_img03.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -135,8 +129,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c3">
+            </li>
+            <li class="rooms-card" data-card="tempor">
               <img src="img/index-2_img04.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -146,8 +140,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c3">
+            </li>
+            <li class="rooms-card" data-card="tempor">
               <img src="img/index-2_img05.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -157,8 +151,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c1">
+            </li>
+            <li class="rooms-card" data-card="pendisse">
               <img src="img/index-2_img06.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -168,8 +162,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c1">
+            </li>
+            <li class="rooms-card" data-card="pendisse">
               <img src="img/index-2_img07.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -179,8 +173,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-            <div class="rooms-card c3">
+            </li>
+            <li class="rooms-card" data-card="tempor">
               <img src="img/index-2_img08.jpg" alt="" />
               <div class="rooms-card-content">
                 <h3><a href="#">room number</a></h3>
@@ -190,8 +184,8 @@
                 </p>
                 <a href="#" class="more-info">more info</a>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <div class="useful-links-container">
           <h2>Useful links</h2>
