@@ -77,7 +77,7 @@ messageArea.addEventListener("keyup", () => {
   messageArea.addEventListener("focusout", (e) => {
     if (!e.target.value) {
       e.target.parentNode.classList.add("empty");
-    } else if (!/^[a-zA-z]{10,}/.test(e.target.value)) {
+    } else if (e.target.value.length < 3)) {
       e.target.parentNode.classList.add("invalid");
     }
   });
@@ -95,22 +95,6 @@ function clearInputHandler() {
   errorsNumber = 0;
 }
 
-// function conv2EnNum(num) {
-//   return parseFloat(
-//     num
-//       .replace(/[۰۱۲۳۴۵۶۷۸۹]/g, function (d) {
-//         return d.charCodeAt(0) - 1632;
-//       })
-//       .replace(
-//         (/[۰۱۲۳۴۵۶۷۸۹]/g,
-//         function (d) {
-//           return d.charCodeAt(0) - 1776;
-//         })
-//       )
-//   );
-// }
-// let enPhoneNumber = conv2EnNum("۰۱۲۳۴۵۶");
-// console.log(enPhoneNumber);
 formBottun.forEach((btn) => {
   if (btn.dataset.type == "reset") {
     btn.addEventListener("click", (e) => {
