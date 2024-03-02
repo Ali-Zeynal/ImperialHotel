@@ -77,7 +77,7 @@ messageArea.addEventListener("keyup", () => {
   messageArea.addEventListener("focusout", (e) => {
     if (!e.target.value) {
       e.target.parentNode.classList.add("empty");
-    } else if (e.target.value.length < 3)) {
+    } else if (e.target.value.length < 3) {
       e.target.parentNode.classList.add("invalid");
     }
   });
