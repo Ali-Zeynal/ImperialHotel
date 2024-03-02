@@ -2,15 +2,25 @@ const $ = document;
 const MobileMenuButton = $.querySelector(".nav-toggle-label");
 const MobileMenuCheckbox = $.querySelector("#nav-toggle");
 const toTopBtn = $.querySelector(".toTop-btn");
-let navMenuItem = $.querySelectorAll(".nav-menu li a");
-let menuDarkCover = $.querySelector("#cover");
+const navMenuItem = $.querySelectorAll(".nav-menu li a");
+const menuDarkCover = $.querySelector("#cover");
+const navMobileMenuItems = $.querySelectorAll(".nav-mobile-list li a");
+
 MobileMenuButton.addEventListener("click", () => {
   menuDarkCover.classList.toggle("covering");
 });
+
 menuDarkCover.addEventListener("click", () => {
   MobileMenuCheckbox.click();
   menuDarkCover.classList.toggle("covering");
 });
+
+navMobileMenuItems.forEach((MobileMenuItem) => {
+  MobileMenuItem.addEventListener("click", () => {
+    MobileMenuCheckbox.click();
+  });
+});
+
 window.addEventListener("scroll", function () {
   if (window.scrollY > 380 && $.documentElement.clientWidth > 600) {
     toTopBtn.style.opacity = "1";
