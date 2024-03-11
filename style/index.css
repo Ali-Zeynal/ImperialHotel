@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Playball-Regular";
-  src: url("../font/Playball-Regular.ttf"), format("ttf")
+  src: url("../font/Playball-Regular.ttf"), format("ttf");
 }
 @font-face {
   font-family: "Playball";
-  src: url("../font/Playball.ttf"), format("ttf")
+  src: url("../font/Playball.ttf"), format("ttf");
 }
 @font-face {
   font-family: "OpenSans";
@@ -23,6 +23,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   background-image: url(../img/bodybg.jpg);
@@ -36,20 +37,20 @@ body {
   right: calc(50% - 20px);
   z-index: 10;
 }
-.shapes-6 {
+.shapes {
   width: 40px;
   height: 40px;
   display: grid;
   animation: sh6-0 1.5s infinite linear;
 }
-.shapes-6:before,
-.shapes-6:after {
+.shapes:before,
+.shapes:after {
   content: "";
   grid-area: 1/1;
   background: #f8aa48;
   animation: sh6-1 1.5s infinite linear, sh6-2 1.5s infinite linear;
 }
-.shapes-6:after {
+.shapes:after {
   --s: -1;
   animation-direction: reverse;
 }
@@ -238,7 +239,7 @@ img {
 .brand h1 {
   font-size: 140px;
   font-weight: normal;
-  font-family: "playball" , "Playball-Regular";
+  font-family: "playball", "Playball-Regular";
 }
 .brand h1 a {
   color: #f8aa48;
@@ -272,17 +273,14 @@ img {
   overflow: hidden;
   box-shadow: 0 0 15px 0 rgb(248, 169, 72);
 }
+
 .slide-container .slides img {
   width: 100%;
   height: 100%;
   position: absolute;
   object-fit: cover;
 }
-.slide-container .slides img:not(.active-slide) {
-  top: 0;
-  left: -100%;
-  /* left: 0%; */
-}
+
 .next-slide,
 .prev-slide {
   position: absolute;
@@ -379,7 +377,7 @@ img {
 }
 .top-section h2 {
   color: #fff;
-  font-family: "playball" , "Playball-Regular";
+  font-family: "playball", "Playball-Regular";
   font-size: 30px;
   font-weight: normal;
   margin-bottom: 1.5rem;
@@ -470,7 +468,7 @@ img {
   border-bottom: 1px solid #2b2a28;
 }
 .middle-section h2 {
-  font-family: "playball" ,"Playball-Regular";
+  font-family: "playball", "Playball-Regular";
   font-size: 34px;
   line-height: 43px;
   color: rgb(248, 170, 72);
@@ -509,7 +507,7 @@ img {
   border-bottom: 1px solid #2b2a28;
 }
 .bottom-section h2 {
-  font-family: "Playball" , "Playball-Regular";
+  font-family: "Playball", "Playball-Regular";
   font-weight: 400;
   color: #fff;
   font-size: 30px;
@@ -656,35 +654,11 @@ img {
   -o-transition: width 0.5s ease-out;
 }
 
-@keyframes next1 {
-  from {
-    left: 0%;
+@keyframes fade {
+  0% {
+    opacity: 0;
   }
-  to {
-    left: -100%;
-  }
-}
-@keyframes next2 {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0%;
-  }
-}
-@keyframes prev1 {
-  from {
-    left: 0%;
-  }
-  to {
-    left: 100%;
-  }
-}
-@keyframes prev2 {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0%;
+  100% {
+    opacity: 1;
   }
 }
