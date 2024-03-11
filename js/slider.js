@@ -13,15 +13,18 @@ let slidesArray = [
 
 let slidesArrayIndex = 0;
 
+function fadeAnime() {
+  setTimeout(() => {
+    slideImage.style.animation = "";
+  }, 500);
+  slideImage.style.animation = "fade 2s";
+}
 function nextSlide() {
   slidesArrayIndex++;
   if (slidesArrayIndex > slidesArray.length - 1) {
     slidesArrayIndex = 0;
   }
-  setTimeout(() => {
-    slideImage.style.animation = "";
-  }, 500);
-  slideImage.style.animation = "fade 2s";
+  fadeAnime()
   slideImage.setAttribute("src", slidesArray[slidesArrayIndex]);
   indicators();
 }
@@ -32,7 +35,7 @@ function prevSlide() {
     slidesArrayIndex = slidesArray.length - 1;
   }
   slideImage.setAttribute("src", slidesArray[slidesArrayIndex]);
-
+  fadeAnime()
   indicators();
 }
 function autoSlide() {
@@ -67,6 +70,7 @@ slideDots.forEach((dot) => {
 function switchImage(dotElem) {
   $.querySelector(".dot-active").classList.remove("dot-active");
   let dotId = dotElem.getAttribute("attr");
+  fadeAnime()
   slideImage.setAttribute("src", slidesArray[dotId]);
   dotElem.classList.add("dot-active");
 }
