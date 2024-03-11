@@ -1,64 +1,72 @@
-const slidesImage = document.querySelectorAll(".slides img");
-const nextSlideButton = document.querySelector(".next-slide");
-const prevSlideButton = document.querySelector(".prev-slide");
-const slideContainer = document.querySelector(".slide-container");
-const slideDots = document.querySelectorAll(".dot");
-let slideCounter = 0;
-function prevSlide() {
-  slidesImage[slideCounter].style.animation = "prev1 2s ease-out forwards";
-  if (slideCounter == 0) {
-    slideCounter = slidesImage.length - 1;
-  } else {
-    slideCounter--;
-  }
-  slidesImage[slideCounter].style.animation = "prev2 2s ease-out forwards";
-  indicators();
-}
+const slideImage = $.querySelector(".slides > img");
+const imageContainer = $.querySelector(".slides");
+const nextSlideButton = $.querySelector(".next-slide");
+const prevSlideButton = $.querySelector(".prev-slide");
+const slideContainer = $.querySelector(".slide-container");
+const slideDots = $.querySelectorAll(".dot");
+
+let slidesArray = [
+  "img/index_slide01.jpg",
+  "img/index_slide02.jpg",
+  "img/index_slide03.jpg",
+];
+
+let slidesArrayIndex = 0;
+
 function nextSlide() {
-  slidesImage[slideCounter].style.animation = "next1 2s ease-out forwards";
-  if (slideCounter >= slidesImage.length - 1) {
-    slideCounter = 0;
-  } else {
-    slideCounter++;
+  slidesArrayIndex++;
+  if (slidesArrayIndex > slidesArray.length - 1) {
+    slidesArrayIndex = 0;
   }
-  slidesImage[slideCounter].style.animation = "next2 2s ease-out forwards";
+  setTimeout(() => {
+    slideImage.style.animation = "";
+  }, 500);
+  slideImage.style.animation = "fade 2s";
+  slideImage.setAttribute("src", slidesArray[slidesArrayIndex]);
   indicators();
 }
-function autoSliding() {
-  autoSlide = setInterval(autoNextSlide, 4000);
-  function autoNextSlide() {
+
+function prevSlide() {
+  slidesArrayIndex--;
+  if (slidesArrayIndex < 0) {
+    slidesArrayIndex = slidesArray.length - 1;
+  }
+  slideImage.setAttribute("src", slidesArray[slidesArrayIndex]);
+
+  indicators();
+}
+function autoSlide() {
+  setAutoSliding = setInterval(() => {
     nextSlide();
     indicators();
-  }
+  }, 3000);
 }
-autoSliding();
-slideContainer.addEventListener("mouseover", function () {
-  clearInterval(autoSlide);
+window.addEventListener("load", () => {
+  autoSlide();
 });
-
-slideContainer.addEventListener("mouseout", autoSliding);
 prevSlideButton.addEventListener("click", prevSlide);
 nextSlideButton.addEventListener("click", nextSlide);
+slideContainer.addEventListener("mouseover", function () {
+  clearInterval(setAutoSliding);
+});
+slideContainer.addEventListener("mouseout", autoSlide);
 function indicators() {
   for (let i = 0; i < slideDots.length; i++) {
     slideDots[i].className = slideDots[i].className.replace(" dot-active", " ");
   }
-  slideDots[slideCounter].className += " dot-active";
+  slideDots[slidesArrayIndex].classList.add("dot-active");
 }
-function switchImage(currentImage) {
-  currentImage.classList.add("dot-active");
-  let imageId = currentImage.getAttribute("attr");
-  if (imageId > slideCounter) {
-    slidesImage[slideCounter].style.animation = "next1 1.5s ease-out forwards";
-    slideCounter = imageId;
-    slidesImage[slideCounter].style.animation = "next2 1.5s ease-out forwards";
-  } else if (imageId == slideCounter) {
-    return;
-  } else {
-    slidesImage[slideCounter].style.animation = "prev1 1.5s ease-out forwards";
-    slideCounter = imageId;
-    slidesImage[slideCounter].style.animation = "prev2 1.5s ease-out forwards";
-  }
-  indicators();
+slideDots.forEach((dot) => {
+  dot.addEventListener("click", (e) => {
+    switchImage(e.target);
+  });
+  dot.addEventListener("touchEnd", (e) => {
+    switchImage(e.target);
+  });
+});
+function switchImage(dotElem) {
+  $.querySelector(".dot-active").classList.remove("dot-active");
+  let dotId = dotElem.getAttribute("attr");
+  slideImage.setAttribute("src", slidesArray[dotId]);
+  dotElem.classList.add("dot-active");
 }
-
