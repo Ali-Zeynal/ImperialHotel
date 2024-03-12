@@ -16,7 +16,7 @@ let slidesArrayIndex = 0;
 function fadeAnime() {
   setTimeout(() => {
     slideImage.style.animation = "";
-  }, 500);
+  }, 950);
   slideImage.style.animation = "fade 2s";
 }
 function nextSlide() {
